@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Product</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container mt-3">
+        <div class="row justify-content-center">
+                <div class="col-md-6 card">
+                    <div class="card-body">
+                        <legend class="text-center my-4">Add New Product</legend>
+                        <form action="add_new_product.php" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="brand" required placeholder="Brand">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="model" required placeholder="Model">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="color" placeholder="Color">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="storage" required placeholder="Storage (GB)">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="unit_price" required placeholder="Unit Price">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="number" class="form-control" name="stock_quantity" required placeholder="In Stock">
+                            </div>
+
+                            <div class="form-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" name="phone_img" required>
+                                    <label class="custom-file-label">Phone Image</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="form-control" id="specification" name="specification" rows="3" required placeholder="Secification"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-primary" value="Add" name="Added">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

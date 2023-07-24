@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Account Registration</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head> 
+<body>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+                <div class="col-md-6 card">
+                    <div class="card-body">
+                        <form action="staff_registration.php" method="post" enctype="multipart/form-data">
+                            <fieldset>
+                                <legend class="text-center my-5">Staff Account Registration</legend>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="name" required placeholder="Name">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="email" class="form-control" name="email" required placeholder="Email">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="password" class="form-control" name="password" required placeholder="Password">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="dob">DOB :</label>
+                                    <input type="date" class="form-control" id="dob" name="dob" required>
+                                </div>                             
+
+                                <div class="form-group">
+                                    <select class="form-control" name="gender" required>
+                                        <option value="" disabled selected hidden>Choose Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>                         
+
+                                <div class="form-group">
+                                    <select class="form-control" name="position" required>
+                                        <option value="" selected disabled hidden>Position</option>
+                                        <option value="storeManager">Store Manager</option>
+                                        <option value="saleAssociate">Sales Associate</option>
+                                        <option value="serviceTechnician">Service Technician</option>
+                                        <option value="customerServiceRepresentative">Customer Service Representative</option>
+                                        <option value="stockClerk">Stock Clerk</option>
+                                        <option value="technicalSupportSpecialist">Technical Support Specialist</option>
+                                        <option value="marketing">Marketing and Promotion</option>
+                                        <option value="administrativeStaff">Administrative Staff</option>
+                                    </select>
+                                </div>               
+
+                                <div class="form-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" name="profile" required>
+                                        <label class="custom-file-label" for="profile">Choose file</label>
+                                    </div>
+                                </div>                                
+
+                                <div class="form-group">
+                                    <!-- <label for="address">Address:</label> -->
+                                    <textarea class="form-control" id="address" name="address" cols="15" rows="4" placeholder="Address"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <!-- <label for="phone">Phone:</label> -->
+                                    <input type="phone" class="form-control" id="phone" name="phone" required placeholder="Phone"
+                                        onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+                                        minlength="8" maxlength="11">
+                                </div>
+
+                                <div class="form-group text-center">
+                                    <input type="submit" class="btn btn-primary" value="Register" name="Registered">
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

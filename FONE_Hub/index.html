@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fone House Admin</title>
+        <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        a {
+            text-decoration: none;
+        }
+        .table td {
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center my-5">
+        <h2 class="mt-4">FONE Hub Admin</h2>
+        <h4 class="my-5"><a href="Product/home.php">Go to Website</a></h4>
+        <table class="table table-bordered table-striped my-4">
+            <thead class="table-dark">
+                <tr>
+                    <th><h5>Account Sign In</h5></th>
+                    <th><h5>Manage</h5></th>
+                    <th><h5>Add New</h5></th>
+                    <th><h5>View</h5></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Order Role -->
+                <tr>
+                    <td></td>
+                    <td><a href="Product/manage_order_list.php">Order List</a></td>
+                    <td></td>
+                    <td><a href="Product/order_list.php">View Orders</a></td>
+                </tr>
+                <!-- Customer Role -->
+                <tr>
+                    <td><a href="Customer/customer_signIn.html">Customer</a></td>
+                    <td><a href="Customer/customer_list.php">Customer List</a></td>
+                    <td><a href="Customer/customer_registration.html">Customer Registration</a></td>
+                </tr>
+                <!-- Staff Role -->
+                <tr>
+                    <td><a href="Staff/staff_signIn.html">Staff</a></td>
+                    <td><a href="Staff/staff_list.php">Staff List</a></td>
+                    <td><a href="Staff/staff_registration.html">Staff Registration</a></td>
+                </tr>
+                <!-- Product Role -->
+                <tr>
+                    <td></td>
+                    <td><a href="Product/phone_list.php">Product List</a></td>
+                    <td><a href="Product/add_new_product.html">New Product</a></td>
+                </tr>
+                <!-- Admin Role -->
+                <tr>
+                    <td><a href="Admin/admin_signIn.html">Admin</a></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="customer_msg.php">Customer Message</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Include Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

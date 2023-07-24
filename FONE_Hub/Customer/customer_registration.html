@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Account Registration</title>
+        <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .card {
+            background-color: #f7f7f7;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: rgba(137, 50, 109, 0.13);
+            padding: 15px 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group input[type="file"] {
+            display: block;
+            /* margin-top: 5px; */
+        }
+
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: rgba(137, 50, 109, 0.65);
+            border: none;
+            border-radius: 20px;
+            padding: 7px 15px;
+            color: white;
+        }
+        button:hover {
+            background-color: rgba(137, 50, 109, 0.9);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card my-3">
+                    <form action="customer_registration.php" method="post" enctype="multipart/form-data">
+                        <fieldset>
+                            <legend class="text-center mt-3 mb-5">Customer Account Registration</legend>
+        
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" name="name" required placeholder="Name">
+                            </div>
+        
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" name="email" required placeholder="Email">
+                            </div>
+        
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="password" name="password" required placeholder="Password">
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="dob">DOB :</label>
+                                <input type="date" class="form-control" id="dob" name="dob" required>
+                            </div>   
+        
+                            <div class="form-group">
+                                <label for="profile">Profile Picture :</label>
+                                <input type="file" name="profile" id="profile" required>
+                            </div>
+        
+                            <div class="form-group">
+                                <textarea class="form-control" name="address" id="address" cols="15" rows="4" placeholder="Address"></textarea>
+                            </div>
+        
+                            <div class="form-group">
+                                <input type="tel" class="form-control" id="phone" name="phone" required placeholder="Phone" pattern="[0-9]{8,11}">
+                            </div>
+
+                            <div class="form-group text-center">
+                                <button type="submit" name="Registered">Register</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Sign in</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .card {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: rgba(137, 50, 109, 0.13);
+            border: none;
+        }
+        legend {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        legend > span {
+            font-size: 18px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 0;
+            border-top: 1px solid #ddd;
+        }
+        button {
+            background-color: rgba(137, 50, 109, 0.65);
+            border: none;
+            border-radius: 20px;
+            padding: 7px 15px;
+            color: white;
+        }
+        button:hover {
+            background-color: rgba(137, 50, 109, 0.9);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <form action="customer_signIn.php" method="post">
+                            <fieldset>
+                                <legend>Sign In <br><span>To Your Account</span></legend>
+
+                                <div class="form-group mt-5">
+                                    <input type="email" class="form-control" id="email" name="email" required placeholder="Email">
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" id="password" name="password" required placeholder="Password">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text password-toggle-icon" style="background-color: white; border: none;">
+                                                <i class="far fa-eye"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div><br>
+
+                                <div class="form-group">
+                                    <button type="submit" name="Sign_in">Sign In</button>
+                                </div>
+
+                                <div>
+                                    <p><a href="">Forgot password?</a></p><br>
+                                    <hr>
+                                    <p>Don't have an account? <br><a href="customer_registration.html">Create an account</a></p>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".password-toggle-icon").click(function() {
+                var passwordField = $("#password");
+                var fieldType = passwordField.attr("type");
+                if (fieldType === "password") {
+                    passwordField.attr("type", "text");
+                    $(this).find("i").removeClass("far fa-eye").addClass("far fa-eye-slash");
+                } else {
+                    passwordField.attr("type", "password");
+                    $(this).find("i").removeClass("far fa-eye-slash").addClass("far fa-eye");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
